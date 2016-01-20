@@ -5,18 +5,17 @@
 \chapter{Beispiel Kapitel}
 \label{chap:beispiel-kapitel}
 
+\section{Abbildungen}\label{sec:abbildungen}
+
 Eine Abbildung lässt sich einfach über:
 
 \lstset{language=TeX}
 \begin{lstlisting}
-
 \begin{figure}[htb]
-\centering
-\includegraphics[width=\textwidth]{_images/chapter1/foc-ac-dc.pdf}
+\includegraphics{..pfad/foc-ac-dc.pdf}
 \caption{Beschriftung der Abbildung}
 \label{fig:foc-ac-dc}
 \end{figure}
-
 \end{lstlisting}
 
 einfügen.
@@ -25,7 +24,7 @@ Wenn die Abbildung maßstabsgetreu erstellt wird, muss \verb|\centering| und der
 
 \begin{figure}[htb]
 	\centering
-	\includegraphics[width=\textwidth]{foc-dc-ac.pdf}
+	\includegraphics[width=\textwidth]{_images/chapter1/foc-dc-ac.pdf}
 	\caption{Beschriftung der Abbildung}
 	\label{fig:foc-dc-ac}
 \end{figure}
@@ -41,9 +40,58 @@ Im Text zitierte Werke werden über die Syntax \verb|\textcite[S.~2]{ternes2015}
 
 Der aktuelle Stil des Literaturverzeichnisses und der Zitationen ist \verb|alphabetic|, kann aber auch in Absprache geändert werden, dazu empfiehlt es sich, die \verb|BibLaTeX|-Dokumentation zu konsultieren.
 
+\section{Literaturverwaltungsprogramme}
+
+Die Verwaltung des Lizeraturverzeichnisses stellt bei Abschlussarbeiten eine große Herausforderung dar. Um vermeidbaren Fehlern vorzubeugen empfiehlt sich die Nutzung einer sog.\ Literaturverwaltungssoftware. In den meisten Fällen ist ein direkte Export als \verb|biblatex|-Datei integriert, was das einbinden in die Abschlussarbeit deutlich erleichtert.  
+
+\begin{table}[htb]
+	\caption{Einführender Überlick über Literaturverwaltungsprogramme}
+	\label{tab:literaturverwaltung}
+	\begin{tabularx}{1.0\textwidth}{l l l X}
+		\toprule
+			Programm & OS & Website & Extras\\
+		\midrule
+			Zotero & Windows, OS X & \href{https://www.zotero.org}{zotero.org} & FireFox Plugin, ISBN Suchfunktion\\
+			Mendeley & Windows, OS X & \href{https://www.mendeley.com/}{mendeley.com} & watchfolder\\
+			JabRef	& Windows, OS X & \href{http://jabref.sourceforge.net/}{jabref} & natives bibtex Format \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\section{Tabellen}\label{sec:tables}
+
+Die folgende Tabelle (s.~Tab.~\ref{tab:tabelle-test}) ist ein Beispiel.
+
+\begin{table}[htb]
+		\caption{Tabellenüberschrift}
+		\label{tab:tabelle-test}
+		\centering
+	\begin{tabularx}{0.4\textwidth}{l c c}
+			\toprule
+			Messsung	&	Spannung		&	Strom	\\
+			&	\si{\volt}	&	\si{\ampere} \\
+			\midrule
+			1			&	12.2			&	1.2	\\
+			2			&	13.1			&	1.21 \\
+			\bottomrule
+	\end{tabularx}
+\end{table}
+
+
+
+\section{Abschließende Hinweise zum anfertigen von wissenschaftlichen Qualifikationsarbeiten}\label{sec:hinweise-wiss-arbeiten}
+
+ Um die Leserlichkeit eines Textes zu verbessern sollten einige typografische Regeln beachtet werden. Eine einführende Lektüre hierfür ist: \fullcite{bier_typokurz_2009}. Bevor Sie sich mit dieser Vorlage auseinadersetzen, sollten Sie dieses Werk gelesen haben.
+ 
+ Für die Einführung in das wissenschaftliche arbeiten mit \LaTeX\ empfehle ich folgendes Buch: \fullcite{schlosser_wissenschaftliche_2014}. Dieses Buch dient lediglich als Einführung und dient dem besseren Verständnis und Umgang mit \LaTeX.
+ 
+ Als \enquote{Standardwerk} für das wissenschaftliche Arbeiten empfehle ich: \fullcite{theisen_wissenschaftliches_2013}.
+
+Das folgende Buch: \fullcite{kornmeier_wissenschaftlich_2013}, ist eine Art \enquote{Kochbuch} für das wissenschaftliche Arbeiten und versucht dieses auch zu vermitteln. Für eine differenzierte Betrachtung empfehle ich die Auseinandersetzung mit anderer Fachliteratur in diesem Bereich.
+
 %%% Local Variables: 
 %%% mode: latex
-%%% TeX-master: "main"
+%%% TeX-master: "main.tex"
 %%% TeX-open-quote: "\\enquote{"
 %%% TeX-close-quote: "}"
 %%% LaTeX-csquotes-open-quote: "\\enquote{"
